@@ -12,13 +12,13 @@ jobs:
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.3.1
       with:
         submodules: true
         fetch-depth: 0
 
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
+      uses: peaceiris/actions-hugo@v6.0.2
       with:
         hugo-version: 'latest'
         extended: true
@@ -28,7 +28,7 @@ jobs:
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v4
+      uses: peaceiris/actions-gh-pages@v4.0.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
