@@ -17,6 +17,9 @@ jobs:
         submodules: recursive
         fetch-depth: 0
 
+    - name: Initialize submodules
+      run: git submodule update --init --recursive
+
     - name: Setup Node.js 24
       uses: actions/setup-node@v6
       with:
