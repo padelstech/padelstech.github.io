@@ -20,7 +20,7 @@ jobs:
     - name: Setup Hugo
       uses: crazy-max/ghaction-hugo@v3.3.0
       with:
-        version: latest
+        version: '0.159.1'
         extended: true
 
     - name: Build
